@@ -4,7 +4,7 @@
   "description": "Routes microservice",
   "main": "routes.ts",
   "scripts": {
-    "test": "npx ts-node routes.ts",
+    "test": "npx ts-node connect.ts",
     "account": "npx ts-node github.ts"
   },
   "keywords": [],
