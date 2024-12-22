@@ -1,7 +1,7 @@
 // Connects to MongoDB
-// Only need one client instance
 
 const { MongoClient, ServerApiVersion } = require("mongodb");
+require("dotenv").config()
 const USER = process.env.DBUSER;
 const PSWD = process.env.DBPASS;
 const HOST = process.env.DBHOST;
@@ -32,6 +32,7 @@ async function run() {
     await client.close();
   }
 }
+
 run().catch(console.dir);
 
 export default client;

@@ -1,7 +1,10 @@
+import client from "./connect";
 
 export const getServerSideProps = (async () => {
-    const response = await fetch("")
-    const pageData = await response.json()
+    await client.connect();
+    const response = await client.findOne();
+    const pageData = await response.json();
+    await client.close();
 
     return { 
         props: {
